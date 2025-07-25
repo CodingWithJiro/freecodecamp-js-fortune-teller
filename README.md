@@ -35,7 +35,7 @@ Created and inspired from the fortune telling lab challenge of the [**freeCodeCa
 
 ## 🔍 Overview
 
-This project simulates a digital tarot card reading experience. Users are greeted with a thematic intro and prompted to shuffle the deck. Upon clicking the "Draw" button, three cards are dealt onto the virtual table with animated transitions. Each card flips to display a fortune text—crafted in the spirit of real divination tropes.
+This project simulates a digital tarot card reading experience. Users are greeted with a thematic intro and prompted to shuffle the deck. Upon clicking the "Draw" button, three cards are dealt onto the virtual table with animated transitions. Each card flips to display a fortune text which is crafted in the spirit of real divination tropes.
 
 The site is fully responsive, supports dark mode, has accessible keyboard navigation and animations, and includes subtle sound design via background audio to create a mystical atmosphere. It’s designed mobile-first and adapts cleanly to various screen sizes.
 
