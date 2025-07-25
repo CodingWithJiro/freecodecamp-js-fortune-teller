@@ -64,6 +64,7 @@ The site is fully responsive, supports dark mode, has accessible keyboard naviga
 - Practiced more on `setTimeout()` method in JavaScript
 - Debugging interactive states and animation timing
 - Applied the one function one action rule
+- Downloaded a public API's `.json` file, edited it, and finally extracted its data
 
 ---
 
