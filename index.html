@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veil and Visions</title>
+    <meta name="author" content="Elmar Chavez" />
+    <meta
+      name="description"
+      content="An interactive and responsive tarot reading site built with HTML, CSS, and JavaScript. Inspired from the freeCodeCamp lab on fortune telling. Created during the author's fourth month learning frontend web development."
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <meta property="og:site_name" content="CodingWithJiro" />
+    <meta property="og:title" content="Veil and Visions" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="An interactive and responsive tarot reading site built with HTML, CSS, and JavaScript. Inspired from the freeCodeCamp lab activity on fortune telling. Created during the author's fourth month learning frontend web development."
+    />
+
+    <meta property="og:url" content="ADD_LINK_HERE" />
+
+    <meta
+      property="og:image"
+      content="ADD_LINK_HEREassets/img/site-preview-meta_1200x630.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Veil and Visions" />
+    <meta
+      name="twitter:description"
+      content="Veil and Visions - an interactive tarot site built with #HTML, #CSS, and #JavaScript. Inspired by #freeCodeCamp fortune telling lab activity. #WebDev #TarotReading"
+    />
+
+    <meta
+      name="twitter:image"
+      content="ADD_LINK_HEREassets/img/site-preview-meta_1200x630.png"
+    />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#edefff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#000"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="ADD_LINK_HERE" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="theme">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="theme__icon theme__icon--light"
+        aria-hidden="true"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <g clip-path="url(#a)" fill="currentColor">
+            <path
+              d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"
+            ></path>
+          </g>
+          <defs>
+            <clipPath id="a">
+              <path fill="#ffffff" d="M0 0h24v24H0z"></path>
+            </clipPath>
+          </defs>
+        </g>
+      </svg>
+
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="theme__icon theme__icon--dark hidden"
+        aria-hidden="true"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M9.272 2.406a1 1 0 0 0-1.23-1.355C6.59 1.535 5.432 2.487 4.37 3.55a11.399 11.399 0 0 0 0 16.182c4.518 4.519 11.51 4.261 15.976-.205 1.062-1.062 2.014-2.22 2.498-3.673A1 1 0 0 0 21.55 14.6c-3.59 1.322-7.675.734-10.434-2.025-2.765-2.766-3.328-6.83-1.844-10.168Z"
+            fill="currentColor"
+          ></path>
+        </g>
+      </svg>
+
+      <button
+        type="button"
+        aria-label="Toggle Light/Dark Mode"
+        class="theme__button"
+      ></button>
+    </div>
+
+    <header class="header">
+      <a
+        class="header__skip sr-only"
+        href="#start"
+        aria-label="Skip to main content"
+      >
+        Click start to go directly to the main content of the page.
+      </a>
+
+      <div class="header__container container">
+        <svg
+          width="414"
+          height="726"
+          viewBox="0 0 414 726"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="header__background1"
+          aria-hidden="true"
+        >
+          <g filter="url(#filter0_f_298_151)">
+            <path
+              d="M-227.694 825.957C-217.604 835.742 -207.4 845.013 -196.381 853.55L-197.997 850.965C-201.942 844.655 -191.038 842.11 -186.748 838.968C-181.654 835.238 -177.196 826.002 -172.859 820.909C-169.25 816.669 -162.45 813.85 -157.797 810.941C-140.173 799.922 -126.171 795.034 -105.154 799.816C-94.452 802.251 -82.9733 807.428 -72.1778 808.433C-62.2595 809.356 -47.7561 810.295 -39.1885 816.214C-30.308 822.349 -25.9323 831.786 -18.5478 839.161C-9.08324 848.615 0.390696 848.007 11.5903 854.379C34.9288 867.656 50.8358 876.307 77.9906 873.4C99.326 871.117 118.6 864.02 139.177 858.589C154.318 854.594 166.147 850.412 178.427 840.395C199.377 823.305 213.731 796.198 216.875 768.648C217.879 759.851 213.109 747.337 217.086 739.422C223.793 726.069 248.904 717.093 262.083 713.497C275.437 709.853 292.385 720.493 304.446 725.346C323.177 732.882 341.42 737.823 361.705 737.672C396.134 737.417 414.733 697.387 397.238 669.403C388.836 655.963 376.113 639.392 382.474 622.65C385.778 613.954 399.352 607.853 406.737 615.617C411.63 620.76 405.818 620.453 403.804 624.207C402.636 626.383 407.708 632.165 408.86 634.008C411.353 637.995 413.629 642.323 416.422 646.103C419.985 650.927 433.476 640.248 438.339 638.744C443.807 637.053 456.349 640.01 460.944 644.054C467.629 649.937 477.235 661.682 485.264 663.46C494.001 665.396 507.625 673.13 516.786 669.539C529.173 664.682 537.838 665.51 552.013 666.545C570.119 667.866 585.235 673.788 595.25 655.371C606.276 635.096 610.361 623.561 606.998 600.041C604.704 583.999 608.419 575.322 599.359 560.83C596.401 556.099 593.646 550.633 589.863 546.497C582.309 538.239 565.863 541.492 556.243 542.42C544.077 543.593 514.105 554.849 507.791 567.746C504.356 574.764 505.505 581.045 498.754 586.496C495.125 589.426 490.721 591.656 486.779 594.12C475.286 601.305 465.694 609.69 451.558 606.762C434.127 603.152 412.304 614.396 405.498 589.641C402.695 579.446 427.171 582.169 430.965 582.82C454 586.77 483.494 586.853 499.906 567.987C512.656 553.332 497.795 537.19 489.547 523.996C480.264 509.149 458.031 507.856 442.607 510.182C431.834 511.807 416.435 520.501 405.559 515.832C399.98 513.436 393.372 497.409 390.202 492.339C380.185 476.315 361.503 482.772 347.575 475.139C334.486 467.966 333.28 451.209 337.275 439.384C338.993 434.301 339.694 425.026 343.224 421.049C347.706 416 356.165 412.683 361.78 409.173C387.719 392.956 414.931 385.613 445.818 384.212C471.645 383.041 497.36 385.272 523.181 383.281C546.205 381.506 568.991 379.91 592.107 379.351C620.376 378.666 648.113 375.837 676.239 374.464C700.464 373.281 723.91 371.386 748.152 372.527C760.289 373.098 775.443 368.889 780.248 356.598C794.517 320.101 736.794 283.136 713.676 266.395L713.192 266.044C695.372 253.138 668.814 233.902 646.179 242.405C634.271 246.879 626.209 257.271 618.995 267.26C603.196 289.133 582.486 317.092 551.587 315.607C495 312.886 451.045 276.171 403.935 248.238C372.884 229.827 336.774 248.058 309.31 263.547C256.514 293.321 210.145 338.188 170.09 383.401C163.747 390.56 153.112 411.042 141.081 407.052C129.032 403.056 122.594 410.444 115.589 419.404C107.404 429.874 105.09 433.458 111.888 444.331C127.593 469.452 146.285 492.496 161.951 517.554C181.633 549.037 179.182 595.674 170.339 629.516C162.664 658.89 131.831 682.663 103.964 690.868C87.9572 695.58 70.9457 695.031 54.3239 695.013C26.9941 694.983 -0.592653 694.57 -27.9193 693.066C-56.2533 691.506 -81.9519 683.86 -110.625 688.237C-152.937 694.695 -193.089 718.013 -225.111 745.47C-232.993 752.228 -263.364 776.657 -257.561 791.68C-252.623 804.462 -236.807 817.119 -227.694 825.957Z"
+              fill="url(#paint0_radial_298_151)"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_298_151"
+              x="-498.292"
+              y="0.306152"
+              width="1520.78"
+              height="1113.66"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="120"
+                result="effect1_foregroundBlur_298_151"
+              />
+            </filter>
+            <radialGradient
+              id="paint0_radial_298_151"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(-96.8563 1055.5) rotate(-58.4218) scale(1194.99 2921.49)"
+            >
+              <stop
+                offset="0.125057"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND1-STOP1)"
+              />
+              <stop
+                offset="0.789583"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND1-STOP2)"
+              />
+              <stop
+                offset="1"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND1-STOP3)"
+                stop-opacity="0"
+              />
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <svg
+          width="414"
+          height="661"
+          viewBox="0 0 414 661"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="header__background2"
+          aria-hidden="true"
+        >
+          <g filter="url(#filter0_f_298_127)">
+            <path
+              d="M-492.453 401.366C-458.173 303.044 -382.231 353.765 -349.476 421.316C-340.299 429.665 -333.679 449.482 -322.575 453.811C-302.345 461.7 -277.028 454.989 -256.569 454.634C-235.436 454.268 -213.35 454.581 -198.813 423.167C-183.472 390.02 -141.547 417.954 -124.668 428.72C-122.907 429.843 -92.3143 452.089 -91.2123 441.06C-90.4451 433.382 -92.5109 424.266 -87.8216 419.671C-81.4083 413.387 -64.8732 415.767 -58.5479 421.522C-39.3723 438.968 -30.3957 482.613 -12.2075 504.817C0.606873 520.46 14.9232 531.346 27.8035 546.773C41.6048 563.303 55.068 581.079 68.4927 598.601C78.3661 611.488 88.9987 630.185 101.27 635.21C115.679 641.109 133.931 627.509 132.691 598.19C132.203 586.635 117.038 574.978 112.12 571.453C98.9228 561.992 80.7391 555.75 69.6229 538.958C58.5103 522.17 52.5112 488.68 50.2956 463.684C47.6796 434.171 39.7084 402.107 28.7077 379.36C17.8373 356.883 -2.60684 343.909 -15.8243 326.504C-35.0131 301.235 -62.264 269.218 -64.4253 222.025C-67.0994 163.634 -29.0131 177.942 -9.4949 195.7C14.7396 217.749 27.8457 250.708 45.2095 287.427C57.1664 312.713 65.4996 329.547 72.1095 359.616C74.6085 370.985 83.6404 350.875 85.2205 348.099C91.5579 336.965 101.121 329 109.86 328.766C137.524 328.026 174.212 352.986 184.457 403.217C190.064 430.709 194.576 457.876 202.767 483.427C210.548 507.7 225.266 526.013 238.031 541.014C260.953 567.952 292.149 602.936 319.974 606.005C334.034 607.555 348.272 606.416 362.359 606.416C369.259 606.416 368.688 600.341 368.688 589.552C368.688 562.139 363.695 536.483 364.959 508.519C366.72 469.519 379.353 470.075 397.397 477.258C413.635 483.721 434.629 487.206 446.111 511.398C465.027 551.254 467.585 605.392 461.708 655.159C453.727 722.746 422.981 756.097 386.32 754.496C352.379 753.014 318.216 726.302 285.502 711.306C247.915 694.077 210.062 679.795 172.476 662.769C110.351 634.627 43.8252 639.098 -15.8243 592.431C-77.5876 544.11 -140.894 515.494 -207.968 513.866C-233.954 513.236 -259.966 513.866 -285.955 513.866C-315.593 513.866 -340.319 514.335 -367.786 534.639C-396.831 556.11 -435.333 583.935 -467.022 568.985C-481.438 562.184 -499.469 543.175 -506.694 518.597C-517.49 481.867 -503.126 431.979 -492.453 401.366Z"
+              fill="url(#paint0_radial_298_127)"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_298_127"
+              x="-690.524"
+              y="0.124084"
+              width="1335.03"
+              height="934.427"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="90"
+                result="effect1_foregroundBlur_298_127"
+              />
+            </filter>
+            <radialGradient
+              id="paint0_radial_298_127"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(-470.033 348.605) rotate(20.2568) scale(1172.48 1011.6)"
+            >
+              <stop stop-color="var(--SVG-COLOR-HEADER-BACKGROUND2-STOP1)" />
+              <stop
+                offset="0.732292"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND2-STOP2)"
+              />
+              <stop
+                offset="0.982292"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND2-STOP3)"
+                stop-opacity="0"
+              />
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <svg
+          width="414"
+          height="498"
+          viewBox="0 0 414 498"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="header__background3"
+          aria-hidden="true"
+        >
+          <foreignObject
+            x="-105.009"
+            y="-494.644"
+            width="994.605"
+            height="991.768"
+            ><div
+              xmlns="http://www.w3.org/1999/xhtml"
+              style="
+                backdrop-filter: blur(14px);
+                clip-path: url(#bgblur_0_294_109_clip_path);
+                height: 100%;
+                width: 100%;
+              "
+            ></div
+          ></foreignObject>
+          <g filter="url(#filter0_d_294_109)" data-figma-bg-blur-radius="28">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M402.514 -57.1634L392.294 -412.644L382.074 -57.1634L256.983 -390.065L362.741 -50.5266L136.335 -324.773L346.611 -37.972L43.4248 -223.846L335.431 -20.8603L-11.6804 -98.2183L330.414 -1.04565L-23.0088 38.4948L332.102 19.3246L10.6673 171.479L340.312 38.0431L85.6985 286.323L354.156 53.0813L193.954 370.581L372.132 62.8097L323.703 415.124L392.294 66.174L460.884 415.124L412.455 62.8097L590.633 370.581L430.431 53.0813L698.889 286.323L444.275 38.0431L773.92 171.479L452.486 19.3246L807.596 38.4948L454.174 -1.04565L796.268 -98.2183L449.156 -20.8603L741.163 -223.846L437.976 -37.972L648.252 -324.773L421.846 -50.5266L527.604 -390.065L402.514 -57.1634Z"
+              fill="url(#paint0_radial_294_109)"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_294_109"
+              x="-105.009"
+              y="-494.644"
+              width="994.605"
+              height="991.768"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset />
+              <feGaussianBlur stdDeviation="41" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.589993 0 0 0 0 0.665863 0 0 0 0 0.954167 0 0 0 0.6 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_294_109"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_294_109"
+                result="shape"
+              />
+            </filter>
+            <clipPath
+              id="bgblur_0_294_109_clip_path"
+              transform="translate(105.009 494.644)"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M402.514 -57.1634L392.294 -412.644L382.074 -57.1634L256.983 -390.065L362.741 -50.5266L136.335 -324.773L346.611 -37.972L43.4248 -223.846L335.431 -20.8603L-11.6804 -98.2183L330.414 -1.04565L-23.0088 38.4948L332.102 19.3246L10.6673 171.479L340.312 38.0431L85.6985 286.323L354.156 53.0813L193.954 370.581L372.132 62.8097L323.703 415.124L392.294 66.174L460.884 415.124L412.455 62.8097L590.633 370.581L430.431 53.0813L698.889 286.323L444.275 38.0431L773.92 171.479L452.486 19.3246L807.596 38.4948L454.174 -1.04565L796.268 -98.2183L449.156 -20.8603L741.163 -223.846L437.976 -37.972L648.252 -324.773L421.846 -50.5266L527.604 -390.065L402.514 -57.1634Z"
+              />
+            </clipPath>
+            <radialGradient
+              id="paint0_radial_294_109"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(392.293 1.23992) rotate(90) scale(413.883 415.302)"
+            >
+              <stop stop-color="var(--SVG-COLOR-HEADER-BACKGROUND3-STOP1)" />
+              <stop
+                offset="0.685417"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND3-STOP2)"
+              />
+              <stop
+                offset="1"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND3-STOP3)"
+                stop-opacity="0"
+              />
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <svg
+          width="733"
+          height="733"
+          viewBox="0 0 733 733"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="header__background4"
+          aria-hidden="true"
+        >
+          <path
+            d="M0.585304 376.195L282.354 352.177L24.7644 235.481L294.276 321.12L100.952 114.731L317.175 296.989L217.549 32.3288L347.566 283.458L356.804 0.818505L380.821 282.587L497.518 24.9975L411.879 294.509L618.267 101.185L436.01 317.409L700.67 217.782L449.54 347.799L732.18 357.037L450.411 381.055L708.001 497.751L438.49 412.112L631.814 618.501L415.59 436.243L515.217 700.903L385.199 449.774L375.962 732.413L351.944 450.644L235.248 708.234L320.887 438.723L114.498 632.047L296.756 415.823L32.0956 515.45L283.225 385.433L0.585304 376.195Z"
+            fill="url(#paint0_radial_254_43)"
+          />
+          <defs>
+            <radialGradient
+              id="paint0_radial_254_43"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(366.383 366.616) rotate(-1.5) scale(365.923)"
+            >
+              <stop
+                offset="0.2375"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND4-STOP1)"
+              />
+              <stop
+                offset="0.721875"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND4-STOP2)"
+              />
+              <stop
+                offset="0.982292"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND4-STOP3)"
+                stop-opacity="0"
+              />
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <svg
+          width="733"
+          height="733"
+          viewBox="0 0 733 733"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="header__background5"
+          aria-hidden="true"
+        >
+          <path
+            d="M0.585304 376.195L282.354 352.177L24.7644 235.481L294.276 321.12L100.952 114.731L317.175 296.989L217.549 32.3288L347.566 283.458L356.804 0.818505L380.821 282.587L497.518 24.9975L411.879 294.509L618.267 101.185L436.01 317.409L700.67 217.782L449.54 347.799L732.18 357.037L450.411 381.055L708.001 497.751L438.49 412.112L631.814 618.501L415.59 436.243L515.217 700.903L385.199 449.774L375.962 732.413L351.944 450.644L235.248 708.234L320.887 438.723L114.498 632.047L296.756 415.823L32.0956 515.45L283.225 385.433L0.585304 376.195Z"
+            fill="url(#paint0_radial_254_43)"
+          />
+          <defs>
+            <radialGradient
+              id="paint0_radial_254_43"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(366.383 366.616) rotate(-1.5) scale(365.923)"
+            >
+              <stop
+                offset="0.2375"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND5-STOP1)"
+              />
+              <stop
+                offset="0.721875"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND5-STOP2)"
+              />
+              <stop
+                offset="0.982292"
+                stop-color="var(--SVG-COLOR-HEADER-BACKGROUND5-STOP3)"
+                stop-opacity="0"
+              />
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <h1 class="header__title">
+          Veil <span class="header__span">and</span> Visions
+        </h1>
+
+        <p class="header__subtitle">See What Was, What Is, What May Be</p>
+
+        <p class="header__description">
+          Draw three cards and glimpse the thread that binds your story.
+        </p>
+
+        <audio
+          src="./assets/media/audio/windWhistle.mp3"
+          preload="auto"
+          class="header__wind-whistle-sfx"
+          aria-hidden="true"
+        ></audio>
+
+        <a
+          href="#main"
+          aria-label="Go to tarot reading"
+          class="header__cta"
+          id="start"
+        >
+          Start
+        </a>
+      </div>
+    </header>
+
+    <main class="main hidden" id="main">
+      <svg
+        width="415"
+        height="678"
+        viewBox="0 0 415 678"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="main__background1"
+        aria-hidden="true"
+      >
+        <g filter="url(#filter0_f_372_4)">
+          <path
+            d="M-58.7409 516.727C-50.6513 522.302 -42.543 527.509 -33.9577 532.117L-35.3715 530.522C-38.8222 526.63 -31.6011 523.612 -29.0078 520.948C-25.9294 517.787 -23.9267 510.904 -21.5279 506.89C-19.5315 503.549 -15.1711 500.817 -12.3007 498.272C-1.4295 488.634 7.6554 483.642 22.6972 484.501C30.3564 484.939 38.869 487.177 46.4271 486.618C53.371 486.105 63.4772 485.07 70.0692 488.157C76.9019 491.357 81.0121 497.354 86.9574 501.582C94.5775 507.002 101.037 505.484 109.496 508.578C127.123 515.025 139.091 519.143 157.472 513.992C171.914 509.945 184.377 502.818 197.932 496.689C207.906 492.18 215.574 487.926 222.878 479.597C235.338 465.388 242.09 445.039 241.064 425.684C240.736 419.503 235.997 411.431 237.82 405.513C240.896 395.531 257.165 386.433 265.832 382.426C274.615 378.366 287.531 383.736 296.407 385.683C310.192 388.706 323.34 389.997 337.306 387.542C361.008 383.374 369.189 353.625 353.885 336.363C346.535 328.073 335.844 318.125 338.288 305.847C339.557 299.47 348.207 293.691 354.197 298.186C358.167 301.165 354.125 301.627 353.172 304.448C352.619 306.083 356.785 309.481 357.793 310.617C359.973 313.077 362.044 315.796 364.407 318.078C367.423 320.99 375.484 312.065 378.662 310.465C382.236 308.665 391.224 309.25 394.86 311.504C400.15 314.785 408.133 321.767 413.873 322.062C420.12 322.383 430.409 326.135 436.307 322.597C444.282 317.814 450.351 317.38 460.242 316.45C472.876 315.262 483.982 317.591 488.751 303.735C494.001 288.481 495.48 280.056 490.435 264.234C486.993 253.441 488.548 247.03 480.623 238.09C478.036 235.172 475.503 231.724 472.416 229.311C466.251 224.494 455.292 228.644 448.768 230.398C440.518 232.617 421.163 243.851 418.306 253.473C416.751 258.709 418.271 262.905 414.25 267.445C412.088 269.886 409.311 271.933 406.879 274.089C399.79 280.374 394.15 287.266 384.067 286.887C371.633 286.419 357.893 296.699 350.332 280.424C347.218 273.722 364.405 272.762 367.096 272.77C383.432 272.822 403.772 269.46 412.899 254.554C419.988 242.974 407.873 233.569 400.658 225.431C392.538 216.272 377.062 217.959 366.7 221.35C359.463 223.719 349.855 231.497 341.817 229.539C337.694 228.535 331.281 218.253 328.508 215.126C319.745 205.242 307.616 211.859 297.131 208.212C287.276 204.785 284.502 193.373 285.886 184.759C286.48 181.056 285.888 174.581 287.86 171.431C290.365 167.431 295.811 164.164 299.275 161.093C315.275 146.908 333.181 138.692 354.31 134.145C371.977 130.343 389.961 128.9 407.529 124.534C423.194 120.642 438.716 116.9 454.586 113.834C473.992 110.086 492.784 104.92 512.012 100.712C528.574 97.0887 544.516 93.0642 561.359 91.0404C569.791 90.0273 579.749 85.3687 581.636 76.3399C587.241 49.5274 543.167 30.7389 525.29 21.8788L524.915 21.6932C511.136 14.8625 490.599 4.68195 475.982 13.1673C468.292 17.6313 463.94 25.7297 460.125 33.4515C451.771 50.3607 440.736 72.0339 419.264 74.5922C379.943 79.2773 345.387 59.0647 309.676 45.2715C286.137 36.1801 263.36 52.9329 246.224 66.7936C213.283 93.4384 186.521 129.741 164.152 165.551C160.61 171.221 155.653 186.572 146.898 185.217C138.129 183.859 134.547 189.698 130.758 196.686C126.329 204.853 125.15 207.591 131.096 214.298C144.834 229.794 160.39 243.511 174.094 258.968C191.311 278.388 195.028 310.82 192.856 335.172C190.971 356.31 172.473 376.272 154.215 385.158C143.728 390.263 131.938 391.856 120.478 393.771C101.636 396.918 82.5717 399.832 63.5607 401.963C43.8488 404.173 25.2479 401.881 5.9904 408.222C-22.4272 417.579 -47.401 438.308 -66.2915 460.946C-70.9409 466.518 -89.044 486.879 -83.3024 496.561C-78.4169 504.8 -66.0471 511.691 -58.7409 516.727Z"
+            fill="url(#paint0_radial_372_4)"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_372_4"
+            x="-229.416"
+            y="-135.057"
+            width="956.541"
+            height="812.174"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="72.5"
+              result="effect1_foregroundBlur_372_4"
+            />
+          </filter>
+          <radialGradient
+            id="paint0_radial_372_4"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(286.237 631.306) rotate(-78.4778) scale(806.198 1970.98)"
+          >
+            <stop
+              offset="0.263542"
+              stop-color="var(--SVG-COLOR-MAIN-BACKGROUND1-STOP1)"
+              stop-opacity="0.9"
+            />
+            <stop
+              offset="0.789583"
+              stop-color="var(--SVG-COLOR-MAIN-BACKGROUND1-STOP2)"
+            />
+            <stop
+              offset="1"
+              stop-color="var(--SVG-COLOR-MAIN-BACKGROUND1-STOP3)"
+            />
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <svg
+        width="415"
+        height="732"
+        viewBox="0 0 415 732"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="main__background2"
+        aria-hidden="true"
+      >
+        <g filter="url(#filter0_f_372_5)">
+          <path
+            d="M80.0577 157.258C71.2871 161.685 62.8306 166.306 54.6719 171.632L56.749 171.156C61.8189 169.993 61.0067 177.777 62.1014 181.33C63.4008 185.547 68.4816 190.604 70.8546 194.633C72.8297 197.986 73.1374 203.122 73.9951 206.861C77.2433 221.022 77.2706 231.388 69.3066 244.178C65.2514 250.69 59.2072 257.088 56.0749 263.99C53.1972 270.33 49.2609 279.695 43.3922 284.001C37.3092 288.464 30.0756 289.197 23.5151 292.388C15.1066 296.479 13.3421 302.876 6.57257 308.817C-7.53426 321.197 -16.8852 329.726 -21.1744 348.328C-24.5443 362.943 -24.2632 377.297 -25.3812 392.13C-26.2039 403.045 -26.1462 411.815 -22.337 422.216C-15.8386 439.963 -1.21573 455.642 16.2636 464.018C21.8447 466.693 31.2011 466.403 35.5207 470.84C42.8072 478.323 42.9945 496.962 42.3566 506.49C41.7103 516.144 30.8067 524.906 24.8436 531.763C15.5831 542.413 8.14797 553.333 3.60929 566.767C-4.09376 589.567 18.0947 611.005 40.5797 605.848C51.3782 603.371 65.233 598.756 74.8377 606.785C79.8266 610.956 80.7527 621.317 73.9358 624.42C69.4193 626.476 70.9511 622.707 68.9322 620.519C67.7618 619.25 62.7831 621.278 61.3023 621.617C58.0984 622.352 54.7191 622.866 51.584 623.846C47.5827 625.097 51.5522 636.45 51.4337 640.006C51.3003 644.005 46.479 651.613 42.7574 653.724C37.343 656.794 27.3887 660.454 24.3781 665.351C21.1021 670.679 12.8777 677.911 13.1557 684.783C13.5315 694.075 11.0032 699.61 7.07878 708.736C2.06589 720.394 -5.30177 729.025 4.57332 739.851C15.4447 751.77 22.1303 757.106 38.435 760.262C49.5564 762.415 54.4381 766.853 66.0822 764.182C69.8837 763.31 74.1238 762.74 77.7211 761.186C84.9033 758.085 86.5146 746.477 88.1015 739.911C90.1084 731.607 89.5263 709.235 82.4505 702.116C78.6007 698.242 74.1892 697.565 72.1321 691.859C71.0264 688.792 70.5605 685.373 69.834 682.206C67.7159 672.972 64.3707 664.719 69.5362 656.051C75.9063 645.362 73.4694 628.376 91.3772 629.541C98.7523 630.02 91.3572 645.565 90.0596 647.923C82.1839 662.235 75.3854 681.698 84.0941 696.852C90.8592 708.625 104.92 702.5 115.521 700.068C127.45 697.332 133.388 682.941 135.378 672.221C136.768 664.734 134.546 652.574 140.117 646.457C142.975 643.32 155.073 642.62 159.147 641.685C172.022 638.732 172.028 624.916 180.254 617.461C187.985 610.455 199.33 613.49 206.227 618.833C209.192 621.129 215.158 623.713 216.978 626.954C219.288 631.069 219.545 637.415 220.58 641.927C225.361 662.769 223.989 682.422 217.852 703.144C212.721 720.472 205.368 736.948 200.779 754.459C196.687 770.073 192.531 785.489 187.615 800.886C181.604 819.715 177.131 838.684 171.607 857.576C166.849 873.849 162.74 889.769 156.443 905.521C153.291 913.407 152.607 924.379 159.626 930.363C180.472 948.134 218.086 918.458 234.431 907.015L234.773 906.775C247.373 897.956 266.151 884.811 265.71 867.915C265.478 859.027 260.457 851.325 255.508 844.276C244.672 828.839 230.94 808.766 238.986 788.696C253.721 751.94 288.023 731.3 317.245 706.569C336.507 690.268 332.721 662.248 328.769 640.565C321.174 598.883 302.139 557.996 281.433 521.2C278.154 515.374 267.057 503.665 272.443 496.631C277.838 489.585 274.429 483.643 270.113 476.968C265.068 469.167 263.23 466.82 254.493 468.824C234.309 473.454 214.814 480.532 194.68 485.15C169.384 490.953 139.138 478.67 118.807 465.091C101.159 453.305 92.5051 427.503 93.4574 407.22C94.0045 395.569 98.2568 384.458 102.069 373.482C108.338 355.437 114.918 337.309 122.16 319.603C129.669 301.243 140.595 286.017 144.26 266.076C149.669 236.65 143.447 204.797 132.632 177.367C129.971 170.616 120.778 144.969 109.528 145.367C99.9561 145.706 87.979 153.259 80.0577 157.258Z"
+            fill="url(#paint0_radial_372_5)"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_372_5"
+            x="-170.807"
+            y="0.362427"
+            width="647.776"
+            height="1080.54"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="72.5"
+              result="effect1_foregroundBlur_372_5"
+            />
+          </filter>
+          <radialGradient
+            id="paint0_radial_372_5"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(-185.853 405.109) rotate(40.1623) scale(806.198 1970.98)"
+          >
+            <stop
+              offset="0.263542"
+              stop-color="var(--SVG-COLOR-MAIN-BACKGROUND2-STOP1)"
+              stop-opacity="0.9"
+            />
+            <stop
+              offset="0.789583"
+              stop-color="var(--SVG-COLOR-MAIN-BACKGROUND2-STOP2)"
+            />
+            <stop
+              offset="1"
+              stop-color="var(--SVG-COLOR-MAIN-BACKGROUND2-STOP3)"
+            />
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <section class="cards" id="cards">
+        <div class="cards__audio" aria-hidden="true">
+          <audio
+            src="./assets/media/audio/dealAllCards.mp3"
+            preload="auto"
+            class="cards__deal-all-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/shuffleCardIn.mp3"
+            preload="auto"
+            class="cards__shuffle-in-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/shuffleCardOut.mp3"
+            preload="auto"
+            class="cards__shuffle-out-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/slideCard.mp3"
+            preload="auto"
+            class="cards__slide-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/dealCard.mp3"
+            preload="auto"
+            class="cards__deal-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/flipCard.mp3"
+            preload="auto"
+            class="cards__flip-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/chime1.mp3"
+            preload="auto"
+            class="cards__chime1-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/chime2.mp3"
+            preload="auto"
+            class="cards__chime2-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/chime3.mp3"
+            preload="auto"
+            class="cards__chime3-sfx"
+          ></audio>
+
+          <audio
+            src="./assets/media/audio/swoosh.mp3"
+            preload="auto"
+            class="cards__swoosh-sfx"
+          ></audio>
+        </div>
+
+        <div class="cards__buttons hidden">
+          <button class="cards__button cards__shuffle" type="button">
+            Shuffle
+          </button>
+
+          <button type="button" class="cards__button cards__reveal">
+            Draw
+          </button>
+        </div>
+      </section>
+
+      <section class="reveal hidden">
+        <div class="reveal__title">
+          <h2 class="reveal__time"></h2>
+          <p class="reveal__name"></p>
+        </div>
+
+        <div class="reveal__three-cards reveal__future">
+          <div class="reveal__card-back"></div>
+          <div class="reveal__card-front rotate-180"></div>
+        </div>
+
+        <div class="reveal__three-cards reveal__present">
+          <div class="reveal__card-back"></div>
+          <div class="reveal__card-front rotate-180"></div>
+        </div>
+
+        <div class="reveal__three-cards reveal__past">
+          <div class="reveal__card-back"></div>
+          <div class="reveal__card-front rotate-180"></div>
+        </div>
+
+        <button type="button" class="reveal__button">Read</button>
+
+        <audio
+          src="./assets/media/audio/piano.mp3"
+          preload="auto"
+          class="reveal__piano-sfx"
+          aria-hidden="true"
+        ></audio>
+
+        <button type="button" class="reveal__restart">Start Again</button>
+
+        <div class="reveal__interpretation">
+          <p class="reveal__content"></p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
