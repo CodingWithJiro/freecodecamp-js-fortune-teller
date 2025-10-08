@@ -1,4 +1,4 @@
-# 💻 Veil and Visions
+# Veil and Visions
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -20,20 +20,20 @@
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%204-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.freecodecamp-js-fortune-teller&left_text=repo%20views)
 
-## ℹ️ Veil and Visions - An Interactive and Responsive Tarot Reading Site
+## Veil and Visions - An Interactive and Responsive Tarot Reading Site
 
 | _Mobile Preview (375x812)_                                   | _Desktop Preview (1440x960)_                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
 | ![Mobile](./assets/img/site-preview-mobile_375x812.png)      | ![Desktop](./assets/img/site-preview-desktop_1440x960.png)      |
 | ![Mobile](./assets/img/site-preview-mobile-dark_375x812.png) | ![Desktop](./assets/img/site-preview-desktop-dark_1440x960.png) |
 
-Veil and Visions is a whimsical, interactive tarot web app that offers users randomized fortune readings through elegant card reveals and smooth animations, aesthetic design with DOM scripting, accessibility practices, and responsive layout techniques.
+**Veil and Visions** is a whimsical, interactive tarot web app that offers users randomized fortune readings through elegant card reveals and smooth animations, aesthetic design with DOM scripting, accessibility practices, and responsive layout techniques.
 
-Created and inspired from the fortune telling lab challenge of the [**freeCodeCamp.org**](https://www.freecodecamp.org/learn/full-stack-developer/) JavaScript course.
+Created and inspired from the fortune telling lab challenge of the **[freeCodeCamp.org](https://www.freecodecamp.org/learn/full-stack-developer/)** JavaScript course.
 
 ---
 
-## 🔍 Overview
+## Overview
 
 This project simulates a digital tarot card reading experience. Users are greeted with a thematic intro and prompted to shuffle the deck. Upon clicking the "Draw" button, three cards are dealt onto the virtual table with animated transitions. Each card flips to display a fortune text which is crafted in the spirit of real divination tropes.
 
@@ -41,7 +41,7 @@ The site is fully responsive, supports dark mode, has accessible keyboard naviga
 
 ---
 
-## ✨ Features
+## Features
 
 - Animated shuffle and reveal card sequences
 - Toggleable dark/light theme using a single switch
@@ -54,7 +54,7 @@ The site is fully responsive, supports dark mode, has accessible keyboard naviga
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - Managing DOM animations and transitions with JavaScript
 - Making full use of the `<audio>` element with event listeners
@@ -68,7 +68,7 @@ The site is fully responsive, supports dark mode, has accessible keyboard naviga
 
 ---
 
-## 🛠️ Tech Used
+## Tech Used
 
 - HTML5
 - CSS3
@@ -79,29 +79,29 @@ The site is fully responsive, supports dark mode, has accessible keyboard naviga
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository
 2. Open `index.html` in your browser
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-Or you can check out the 👉 [live website here](https://veil-and-visions-fcc-jiro.netlify.app/)
-
----
-
-## 📊 Performance Report
-
-A **Google Lighthouse** audit was conducted on the final version of this project. You can view the full report [here](./assets/downloads/lighthouse-performance-report.pdf).
+Or you can check out the **[live website here](https://veil-and-visions-fcc-jiro.netlify.app/)**
 
 ---
 
-## 🧑‍💻 Author
+## Performance Report
+
+A **Google Lighthouse** audit was conducted on the final version of this project. You can view the **[full report here](./assets/downloads/lighthouse-performance-report.pdf)**.
+
+---
+
+## Author
 
 Created by **Elmar Chavez**
 
-🗓️ Month/Year: **July 2025**
+Month/Year: **July 2025**
 
-📚 Journey: **4<sup>th</sup>** month of learning _frontend web development_.
+Journey: **4<sup>th</sup>** month of learning _frontend web development_.
